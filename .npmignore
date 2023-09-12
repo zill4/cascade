@@ -1,0 +1,34 @@
+# Dependency directory
+node_modules/
+
+# Documentation directory
+docs/
+
+# Build directory
+dist/bundle/
+dist/tests/
+dist/mocha/
+
+src/tests/
+src/mocha/
+
+# log, packed files
+*.log
+*.tgz
+
+# Ignore files
+.gitignore
+.npmignore
+
+# Build configuration files
+tsconfig.json
+webpack.config.js
+webpack.dev.config.js
+.travis.yml
+
+# Editor configuration files
+.vscode/
+
+# MkDocs files
+mkdocs.yml
+site
