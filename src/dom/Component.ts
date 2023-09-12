@@ -74,7 +74,7 @@ export abstract class Component<T> implements IVirtualNode<T> {
         // Only update if we are re-rendering
         Cascade.subscribe(this, 'root', (root: any, oldRoot: any) => {
             if (this.rendered) {
-                var element = this.element as Element | null; // Type assertion to Element
+                var element = this.element;
                 // Get namespace from current element
                 // If element is an svg, use undefined, as it may change
                 // Otherwise, assume the namespace comes from parent
