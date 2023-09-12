@@ -1,0 +1,74 @@
+{
+  "name": "cascade",
+  "version": "0.7.10",
+  "description": "A modern library for creating user interfaces.",
+  "author": "Sean Johnson <sjohnson@sjohnsonaz.com>",
+  "contributors": [],
+  "homepage": "https://sjohnsonaz.github.io/cascade",
+  "license": "MIT",
+  "main": "dist/modules/Cascade.js",
+  "typings": "dist/modules/Cascade.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "rimraf ./dist && tsc --declaration",
+    "clean": "rimraf ./dist",
+    "test": "jest --coverage --verbose",
+    "min": "webpack --config webpack.config.js --progress",
+    "dev": "webpack --config webpack.dev.config.js --progress",
+    "watch": "webpack --config webpack.dev.config.js --watch --progress",
+    "dev-local": "tsc --declaration --watch",
+    "open": "opn src/mocha/index.html",
+    "mkdocs": "mkdocs build",
+    "mkdocs-serve": "mkdocs serve",
+    "mkdocs-deploy": "mkdocs gh-deploy",
+    "typedoc": "typedoc --out ./docs/apidocs/ ./src/cascade/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjohnsonaz/cascade.git"
+  },
+  "bugs": {},
+  "dependencies": {
+    "reflect-metadata": "0.1.13"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/reflect-metadata": "0.1.0",
+    "jest": "^26.6.3",
+    "opn-cli": "5.0.0",
+    "prettier": "^2.2.1",
+    "reflect-metadata": "0.1.13",
+    "rimraf": "3.0.2",
+    "ts-jest": "^26.5.5",
+    "ts-loader": "8.0.4",
+    "typedoc": "0.19.2",
+    "typescript": "4.0.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12"
+  },
+  "keywords": [
+    "cascade",
+    "observable",
+    "computed",
+    "observablearray",
+    "reactive",
+    "model",
+    "view",
+    "viewmodel",
+    "mvvm",
+    "mvc",
+    "component",
+    "virtualdom",
+    "virtualnode",
+    "template",
+    "dom",
+    "react",
+    "knockout"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
+  }
+}
