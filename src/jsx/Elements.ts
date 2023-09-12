@@ -15,23 +15,24 @@ export namespace Elements {
         oncommand?: (ev?: Event) => any;
         ongotpointercapture?: (ev?: PointerEvent) => any;
         onlostpointercapture?: (ev?: PointerEvent) => any;
-        onmsgesturechange?: (ev?: MSGestureEvent) => any;
-        onmsgesturedoubletap?: (ev?: MSGestureEvent) => any;
-        onmsgestureend?: (ev?: MSGestureEvent) => any;
-        onmsgesturehold?: (ev?: MSGestureEvent) => any;
-        onmsgesturestart?: (ev?: MSGestureEvent) => any;
-        onmsgesturetap?: (ev?: MSGestureEvent) => any;
-        onmsgotpointercapture?: (ev?: MSPointerEvent) => any;
-        onmsinertiastart?: (ev?: MSGestureEvent) => any;
-        onmslostpointercapture?: (ev?: MSPointerEvent) => any;
-        onmspointercancel?: (ev?: MSPointerEvent) => any;
-        onmspointerdown?: (ev?: MSPointerEvent) => any;
-        onmspointerenter?: (ev?: MSPointerEvent) => any;
-        onmspointerleave?: (ev?: MSPointerEvent) => any;
-        onmspointermove?: (ev?: MSPointerEvent) => any;
-        onmspointerout?: (ev?: MSPointerEvent) => any;
-        onmspointerover?: (ev?: MSPointerEvent) => any;
-        onmspointerup?: (ev?: MSPointerEvent) => any;
+        // All deprecated as non-standard events: https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent
+        // onmsgesturechange?: (ev?: MSGestureEvent) => any;
+        // onmsgesturedoubletap?: (ev?: MSGestureEvent) => any;
+        // onmsgestureend?: (ev?: MSGestureEvent) => any;
+        // onmsgesturehold?: (ev?: MSGestureEvent) => any;
+        // onmsgesturestart?: (ev?: MSGestureEvent) => any;
+        // onmsgesturetap?: (ev?: MSGestureEvent) => any;
+        onmsgotpointercapture?: (ev?: PointerEvent) => any;
+        // onmsinertiastart?: (ev?: GestureEvent) => any;
+        onmslostpointercapture?: (ev?: PointerEvent) => any;
+        onmspointercancel?: (ev?: PointerEvent) => any;
+        onmspointerdown?: (ev?: PointerEvent) => any;
+        onmspointerenter?: (ev?: PointerEvent) => any;
+        onmspointerleave?: (ev?: PointerEvent) => any;
+        onmspointermove?: (ev?: PointerEvent) => any;
+        onmspointerout?: (ev?: PointerEvent) => any;
+        onmspointerover?: (ev?: PointerEvent) => any;
+        onmspointerup?: (ev?: PointerEvent) => any;
         ontouchcancel?: (ev?: TouchEvent) => any;
         ontouchend?: (ev?: TouchEvent) => any;
         ontouchmove?: (ev?: TouchEvent) => any;
@@ -80,7 +81,7 @@ export namespace Elements {
         ondrop?: (ev?: DragEvent) => any;
         ondurationchange?: (ev?: Event) => any;
         onemptied?: (ev?: Event) => any;
-        onended?: (ev?: MediaStreamErrorEvent) => any;
+        // onended?: (ev?: MediaStreamErrorEvent) => any;
         onerror?: (ev?: ErrorEvent) => any;
         onfocus?: (ev?: FocusEvent) => any;
         oninput?: (ev?: Event) => any;
@@ -444,7 +445,8 @@ export namespace Elements {
         name?: string;
         noResize?: boolean;
         onload?: (ev?: Event) => any;
-        sandbox?: DOMSettableTokenList;
+        // commented out no found use
+        //sandbox?: DOMSettableTokenList;
         scrolling?: string;
         security?: any;
         src?: string;
@@ -610,8 +612,9 @@ export namespace Elements {
         loop?: boolean;
         msAudioCategory?: string;
         msAudioDeviceType?: string;
-        msGraphicsTrustStatus?: MSGraphicsTrust;
-        msKeys?: MSMediaKeys;
+        // Commented out deprecated type, no found use.
+        // msGraphicsTrustStatus?: MSGraphicsTrust;
+        msKeys?: MediaKeys;
         msPlayToDisabled?: boolean;
         msPlayToPreferredSourceUri?: string;
         msPlayToPrimary?: boolean;
@@ -619,7 +622,8 @@ export namespace Elements {
         msRealTime?: boolean;
         muted?: boolean;
         networkState?: number;
-        onmsneedkey?: (ev?: MSMediaKeyNeededEvent) => any;
+        // Commented out deprecated type, no found use.
+        // onmsneedkey?: (ev?: MSMediaKeyNeededEvent ) => any;
         paused?: boolean;
         playbackRate?: number;
         played?: TimeRanges;

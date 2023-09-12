@@ -290,7 +290,7 @@ export default class Cascade {
         if (observable) {
             return observable.track();
         } else {
-            throw new Error(CascadeError.NoObservable + property);
+            throw new Error(CascadeError.NoObservable + property.toString());
         }
     }
 
@@ -314,7 +314,7 @@ export default class Cascade {
         if (observable && observable.update) {
             return observable.update();
         } else {
-            throw new Error(CascadeError.NoObservable + property);
+            throw new Error(CascadeError.NoObservable + property.toString());
         }
     }
 
@@ -324,7 +324,7 @@ export default class Cascade {
         if (observable) {
             return observable.setValue(value);
         } else {
-            throw new Error(CascadeError.NoObservable + property);
+            throw new Error(CascadeError.NoObservable + property.toString());
         }
     }
 
@@ -343,7 +343,7 @@ export default class Cascade {
                 return observable.peek();
             }
         } else {
-            throw new Error(CascadeError.NoObservable + property);
+            throw new Error(CascadeError.NoObservable + property.toString());
         }
     }
 
