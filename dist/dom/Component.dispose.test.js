@@ -68,13 +68,13 @@ describe('Component.dispose', () => {
             Cascade_1.default.createElement(View, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueA = false;
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueA = true;
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueB = false;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(viewDisposed).toBe(0);
         expect(parentDisposed).toBe(1);
         expect(childDisposed).toBe(2);
@@ -138,13 +138,13 @@ describe('Component.dispose', () => {
             Cascade_1.default.createElement(View, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueA = 'new value A';
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueB = 'new value B';
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueC = 'new value C';
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(container.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes.length).toBe(1);
         expect(container.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes[0]
             .textContent).toBe('new value C');

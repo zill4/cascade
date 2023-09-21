@@ -88,6 +88,6 @@ class Observable {
         return oldContext;
     }
 }
-exports.default = Observable;
 Observable.id = 0;
+exports.default = Observable;
 //# sourceMappingURL=Observable.js.map

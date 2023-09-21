@@ -37,7 +37,7 @@ describe('Component.diff', () => {
         var container = document.createElement('div');
         Cascade_1.default.render(container, Cascade_1.default.createElement(View, { viewModel: viewModel }));
         viewModel.value = true;
-        await PromiseUtil_1.wait(200);
+        await (0, PromiseUtil_1.wait)(200);
         expect(container.textContent).toBe('');
     });
     it('should update nested roots', async () => {
@@ -72,7 +72,7 @@ describe('Component.diff', () => {
         var container = document.createElement('div');
         Cascade_1.default.render(container, Cascade_1.default.createElement(View, { viewModel: viewModel }));
         viewModel.value = true;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(container.childNodes[0].childNodes[1].textContent).toBe('true');
     });
     it('should update empty nested Components', async () => {
@@ -173,7 +173,7 @@ describe('Component.diff', () => {
         Cascade_1.default.render(container, root);
         viewModel.nonNull = null;
         viewModel.nonUndefined = undefined;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         let div = container.childNodes[0].childNodes[0];
         expect(div.className).not.toBe('nonNull');
         expect(div.id).not.toBe('nonUndefined');
@@ -213,9 +213,9 @@ describe('Component.diff', () => {
             Cascade_1.default.createElement(Parent, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.visible = true;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         let divRoot = container.childNodes[0];
         let divParent = divRoot.childNodes[0];
         let divStatic = divParent.childNodes[0];
@@ -259,9 +259,9 @@ describe('Component.diff', () => {
             Cascade_1.default.createElement(Parent, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.visible = true;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         let divRoot = container.childNodes[0];
         let divParent = divRoot.childNodes[0];
         let divStatic = divParent.childNodes[0];
@@ -305,9 +305,9 @@ describe('Component.diff', () => {
             Cascade_1.default.createElement(Parent, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.visible = false;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         let divRoot = container.childNodes[0];
         let divParent = divRoot.childNodes[0];
         let divStatic = divParent.childNodes[0];
@@ -348,9 +348,9 @@ describe('Component.diff', () => {
             Cascade_1.default.createElement(Parent, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.visible = true;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         let divRoot = container.childNodes[0];
         let divParent = divRoot.childNodes[0];
         let divStatic = divParent.childNodes[0];

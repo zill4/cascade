@@ -109,7 +109,7 @@ describe('ObservableArray', function () {
         catch (e) {
         }
         finally {
-            await PromiseUtil_1.wait(100);
+            await (0, PromiseUtil_1.wait)(100);
             expect(count).toBe(0);
         }
     });

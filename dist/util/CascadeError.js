@@ -7,5 +7,5 @@ var CascadeError;
     CascadeError["NoObservable"] = "No observable attached to Object: ";
     CascadeError["NoOldComponent"] = "Old Component has never been rendered";
     CascadeError["TimeoutElapsed"] = "Timeout elapsed";
-})(CascadeError = exports.CascadeError || (exports.CascadeError = {}));
+})(CascadeError || (exports.CascadeError = CascadeError = {}));
 //# sourceMappingURL=CascadeError.js.map

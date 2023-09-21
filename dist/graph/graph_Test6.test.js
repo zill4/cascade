@@ -15,6 +15,10 @@ var runsChild = 0;
 var childObservable = undefined;
 var childStatic = undefined;
 class Child {
+    get abcd() {
+        runsChild++;
+        return this.parent.a + this.parent.b + this.c + this.d;
+    }
     constructor(parent) {
         this.c = 1;
         this.d = 2;
@@ -25,10 +29,6 @@ class Child {
         });
         this.parent = parent;
         var abcd = this.abcd;
-    }
-    get abcd() {
-        runsChild++;
-        return this.parent.a + this.parent.b + this.c + this.d;
     }
 }
 __decorate([
@@ -45,6 +45,10 @@ __decorate([
     __metadata("design:paramtypes", [])
 ], Child.prototype, "abcd", null);
 class Parent {
+    get ab() {
+        runsParent++;
+        return this.a + this.b;
+    }
     constructor() {
         this.a = 1;
         this.b = 2;
@@ -53,10 +57,6 @@ class Parent {
         childStatic = new Child(this);
         this.childObservable = childObservable;
         this.childStatic = childStatic;
-    }
-    get ab() {
-        runsParent++;
-        return this.a + this.b;
     }
 }
 __decorate([

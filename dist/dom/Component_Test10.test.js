@@ -36,7 +36,7 @@ describe('Component', function () {
         var parent = container.querySelector('#parent');
         runs.push(parent.childNodes[0].id);
         viewModel.id = 'newId';
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         var parent = container.querySelector('#parent');
         runs.push(parent.childNodes[0].id);
         expect(runs[0]).toBe('oldId');

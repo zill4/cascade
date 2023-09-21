@@ -232,7 +232,6 @@ class Cascade {
         return renderedComponent;
     }
 }
-exports.default = Cascade;
 Cascade.Fragment = Fragment_1.default;
 Cascade.reflectAvailable = typeof Reflect === 'object' && typeof Reflect.getMetadata === 'function';
 Cascade.xlinkDeprecated = (function () {
@@ -246,4 +245,5 @@ Cascade.xlinkDeprecated = (function () {
         return ((_a = use.href) === null || _a === void 0 ? void 0 : _a.baseVal) === 'abcd';
     }
 })();
+exports.default = Cascade;
 //# sourceMappingURL=Cascade.js.map

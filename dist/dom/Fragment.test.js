@@ -157,7 +157,7 @@ describe('Fragment.toNode', function () {
         var container = document.createElement('div');
         Cascade_1.default.render(container, Cascade_1.default.createElement(View, { viewModel: viewModel }));
         viewModel.value = true;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         let span = container.childNodes[0];
         let div = span.childNodes[0];
         let text = div.textContent;

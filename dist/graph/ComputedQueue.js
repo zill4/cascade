@@ -27,6 +27,6 @@ class ComputedQueue {
         }
     }
 }
-exports.default = ComputedQueue;
 ComputedQueue.computedQueue = new ComputedQueue();
+exports.default = ComputedQueue;
 //# sourceMappingURL=ComputedQueue.js.map

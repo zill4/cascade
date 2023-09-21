@@ -50,9 +50,9 @@ describe('Component', function () {
         Cascade_1.default.render(container, Cascade_1.default.createElement(Parent, { viewModel: viewModel }));
         viewModel.a = 'a1';
         viewModel.b = 'b1';
-        await PromiseUtil_1.wait(1);
+        await (0, PromiseUtil_1.wait)(1);
         viewModel.b = 'b2';
-        await PromiseUtil_1.wait(1);
+        await (0, PromiseUtil_1.wait)(1);
         expect(viewModel.runsA).toBe(2);
         expect(viewModel.runsB).toBe(3);
     });

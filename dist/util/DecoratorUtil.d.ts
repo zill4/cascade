@@ -1,5 +1,5 @@
 import { IObservable } from '../modules/Cascade';
-export declare type ObservableFactory<T> = {
+export type ObservableFactory<T> = {
     (value: T, thisArg: any): IObservable<T>;
 };
 export default class DecoratorUtil {

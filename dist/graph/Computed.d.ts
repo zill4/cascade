@@ -14,7 +14,7 @@ export default class Computed<T> extends Observable<T> implements ISubscriber {
     peek(): T;
     peekDirty(): T;
     setValue(value: T): Promise<void>;
-    notify(): any;
+    notify(): Promise<void>;
     notifyDirty(): void;
     runUpdate(): Promise<T>;
     runOnly(): T;

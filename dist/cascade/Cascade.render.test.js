@@ -272,9 +272,9 @@ describe('Cascade', function () {
             var container = document.createElement('div');
             var viewModel = new ViewModel();
             Cascade_1.default.render(container, Cascade_1.default.createElement(View, { viewModel: viewModel }));
-            await PromiseUtil_1.wait(0);
+            await (0, PromiseUtil_1.wait)(0);
             viewModel.value = true;
-            await PromiseUtil_1.wait(0);
+            await (0, PromiseUtil_1.wait)(0);
             expect(beforeRenderCount).toBe(2);
         });
         it('should use afterRender and callback ref', function () {
@@ -343,7 +343,7 @@ describe('Cascade', function () {
             viewModel.parentNode = undefined;
             viewModel.childNode = undefined;
             viewModel.value = 2;
-            await PromiseUtil_1.wait(20);
+            await (0, PromiseUtil_1.wait)(20);
             expect(viewModel.afterRenderNode.tagName).toBe('DIV');
             expect(viewModel.parentNode.tagName).toBe('DIV');
             expect(viewModel.childNode.tagName).toBe('SPAN');
@@ -406,7 +406,7 @@ describe('Cascade', function () {
             viewModel.parentRef.current = undefined;
             viewModel.childRef.current = undefined;
             viewModel.value = 2;
-            await PromiseUtil_1.wait(20);
+            await (0, PromiseUtil_1.wait)(20);
             expect(viewModel.afterRenderNode.tagName).toBe('DIV');
             expect(viewModel.parentRef.current.tagName).toBe('DIV');
             expect(viewModel.childRef.current.tagName).toBe('SPAN');

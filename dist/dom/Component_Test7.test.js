@@ -46,9 +46,9 @@ describe('Component', function () {
         var viewModel = new ViewModel();
         var container = document.createElement('div');
         Cascade_1.default.render(container, Cascade_1.default.createElement(Parent, { viewModel: viewModel }));
-        await PromiseUtil_1.wait(1);
+        await (0, PromiseUtil_1.wait)(1);
         viewModel.list.push(5);
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(container.querySelectorAll('li').length).toBe(5);
         expect(viewModel.runsA).toBe(1);
         expect(viewModel.runsB).toBe(2);

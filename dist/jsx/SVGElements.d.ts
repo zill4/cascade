@@ -1,5 +1,5 @@
 import { IVirtualNodeProps } from '../modules/Cascade';
-export declare type JSXElement<T extends Element> = IVirtualNodeProps & Partial<T>;
+export type JSXElement<T extends Element> = IVirtualNodeProps & Partial<T>;
 export interface SVGElements {
     animate: JSXElement<SVGElement>;
     animateColor: JSXElement<SVGElement>;

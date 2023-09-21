@@ -18,6 +18,7 @@
     "reactNamespace": "Cascade",
     "noImplicitAny": false,
     "noImplicitUseStrict": true,
+    "ignoreDeprecations": "5.0",
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": false,

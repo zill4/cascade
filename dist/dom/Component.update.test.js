@@ -49,7 +49,7 @@ describe('Component.update', () => {
         let container = document.createElement('div');
         Cascade_1.default.render(container, Cascade_1.default.createElement(View, { viewModel: viewModel }));
         viewModel.value = true;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(runCount).toBe(2);
     });
     it('should update from inherited observables', async () => {
@@ -83,7 +83,7 @@ describe('Component.update', () => {
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
         child.parentValue = 1;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(container.childNodes[0].childNodes[0].textContent).toBe('1');
     });
     it('should update from inherited abstract observables', async () => {
@@ -118,7 +118,7 @@ describe('Component.update', () => {
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
         child.parentValue = 1;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(container.childNodes[0].childNodes[0].textContent).toBe('1');
     });
     it('should update nested Components', async () => {
@@ -170,13 +170,13 @@ describe('Component.update', () => {
             Cascade_1.default.createElement(View, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueA = 'new value A';
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueB = 'new value B';
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueC = 'new value C';
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(container.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes.length).toBe(1);
         expect(container.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes[0]
             .textContent).toBe('new value C');
@@ -244,11 +244,11 @@ describe('Component.update', () => {
             Cascade_1.default.createElement(View, { viewModel: viewModel })));
         var container = document.createElement('div');
         Cascade_1.default.render(container, root);
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueA = 'new value A';
-        await PromiseUtil_1.wait(0);
+        await (0, PromiseUtil_1.wait)(0);
         viewModel.valueB = 'new value B';
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(container.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes.length).toBe(1);
         expect(container.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes[0]
             .textContent).toBe('new value C');
@@ -282,7 +282,7 @@ describe('Component.update', () => {
         expect(select.value).toBe('2');
         viewModel.options.push(4);
         viewModel.value = 4;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(select.value).toBe('4');
     });
 });

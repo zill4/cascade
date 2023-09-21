@@ -119,5 +119,5 @@ var DiffOperation;
     DiffOperation[DiffOperation["REMOVE"] = -1] = "REMOVE";
     DiffOperation[DiffOperation["NONE"] = 0] = "NONE";
     DiffOperation[DiffOperation["ADD"] = 1] = "ADD";
-})(DiffOperation = exports.DiffOperation || (exports.DiffOperation = {}));
+})(DiffOperation || (exports.DiffOperation = DiffOperation = {}));
 //# sourceMappingURL=Diff.js.map

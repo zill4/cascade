@@ -30,7 +30,7 @@ describe('Cascade.subscribe', () => {
             finalValue = value;
         });
         state.value = 10;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(run).toBe(2);
         expect(finalValue).toBe(10);
     });
@@ -52,7 +52,7 @@ describe('Cascade.subscribe', () => {
             finalValue = value;
         });
         state.value = 0;
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         expect(run).toBe(1);
         expect(finalValue).toBe(0);
     });

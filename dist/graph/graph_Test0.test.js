@@ -113,7 +113,7 @@ describe('Graph', function () {
 describe('Cascade.track', () => {
     it('should emit a Promise which resolves when push is complete', async () => {
         var viewModel = new ViewModel();
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         var abcd = undefined;
         viewModel._graph.subscribe('abcd', function (value) { });
         viewModel.a = 11;
@@ -128,7 +128,7 @@ describe('Cascade.track', () => {
 describe('Cascade.trackAll', () => {
     it('should emit a Promise which resolves when push is complete', async () => {
         var viewModel = new ViewModel();
-        await PromiseUtil_1.wait(20);
+        await (0, PromiseUtil_1.wait)(20);
         var abcd = undefined;
         viewModel._graph.subscribe('abcd', function (value) { });
         viewModel.a = 11;

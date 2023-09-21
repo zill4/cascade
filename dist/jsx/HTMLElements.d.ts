@@ -1,5 +1,5 @@
 import { IVirtualNodeProps } from '../modules/Cascade';
-export declare type JSXElement<T extends Element> = IVirtualNodeProps & Partial<T>;
+export type JSXElement<T extends Element> = IVirtualNodeProps & Partial<T>;
 export interface HTMLElements {
     a: JSXElement<HTMLAnchorElement>;
     abbr: JSXElement<HTMLElement>;
